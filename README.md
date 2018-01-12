@@ -52,8 +52,11 @@ rake
 
 ### Run the app
 
-```sh
-rails s
+```docker build .
+docker-compose run web rake db:create
+docker-compose run web rake db:migrate
+docker-compose run web rake db:seed
+docker-compose up
 ```
 
 Then visit <http://localhost:3000>
