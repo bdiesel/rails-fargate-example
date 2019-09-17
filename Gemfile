@@ -5,42 +5,15 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Rubocop
-gem 'rubocop', '~> 0.51.0'
-
-# Active Admin
-gem 'activeadmin', '~> 1.1.0'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'pg'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 6.0.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+# Use postgres for the database
+gem 'pg'
 
-# Omniauth
-gem 'omniauth', '~>1.7.1'
-gem 'omniauth-github', '~>1.3.0'
-
-gem 'devise', '~>4.3.0'
-
-# Paperclip
-gem 'paperclip', '~> 5.0.0'
-
-# Slim
-gem 'slim', '~> 3.0'
-
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+#gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -54,17 +27,13 @@ gem 'logstash-event'
 gem 'aws-healthcheck'
 
 group :development, :test do
+  # Rubocop
+  gem 'rubocop', '~> 0.74.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
-  gem 'factory_bot_rails', '~> 4.8.2'
-  gem 'faker', '~> 1.8.4'
-  gem 'letter_opener'
-  gem 'rspec-rails', '~> 3.7.1'
-  gem 'selenium-webdriver'
-  gem 'shoulda-matchers', '~> 3.1.2'
-  gem 'spinach-rails', '~> 0.2.1'
+  gem 'capybara', '~> 2.15'
+  gem 'rspec-rails', '~> 3.8.2'
 end
 
 group :development do

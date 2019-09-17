@@ -1,7 +1,5 @@
 # Produciton.com
 
-[![Build Status](https://semaphoreci.com/api/v1/dailydrip/produciton-com/branches/master/badge.svg)](https://semaphoreci.com/dailydrip/produciton-com)
-
 Produciton is a to-do list for launching your application into production.
 
 Choose from among various pre-filled production checklists, fork them, and tweak
@@ -29,7 +27,7 @@ To get started with development:
 ### Clone the repo
 
 ```sh
-git clone git@github.com:dailydrip/produciton.com
+git@github.com:bdiesel/rails-fargate-example.git
 ```
 
 ### Install dependencies
