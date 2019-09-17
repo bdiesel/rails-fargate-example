@@ -1,5 +1,5 @@
 # Base image
-FROM ruby:2.4.2
+FROM ruby:2.6.4
 
 # Setup environment variables that will be available to the instance
 ENV APP_HOME /produciton
