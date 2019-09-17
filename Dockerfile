@@ -1,5 +1,5 @@
 # Base image
-FROM ruby:2.6.2
+FROM ruby:2.6.4
 
 # Setup environment variables that will be available to the instance
 ENV APP_HOME /produciton
@@ -13,6 +13,7 @@ RUN apt-get update -qq \
     libpq-dev \
          # Needed for asset compilation
     nodejs \
+    npm \
     # The following are used to trim down the size of the image by removing unneeded data
   && apt-get clean autoclean \
   && apt-get autoremove -y \
@@ -29,10 +30,11 @@ WORKDIR $APP_HOME
 
 # Add our Gemfile
 # and install gems
-
+RUN gem install bundler
 ADD Gemfile* $APP_HOME/
 RUN bundle install
-
+RUN npm -g install yarn
+RUN yarn install --check-files
 # Copy over our application code
 ADD . $APP_HOME
 
